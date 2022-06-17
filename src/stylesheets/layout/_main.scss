@@ -1,0 +1,32 @@
+.main {
+  display: grid;
+  grid-template-columns: 23ch auto;
+  grid-template-areas:
+    'header header'
+    'sidebar container'
+    'footer footer';
+  grid-gap: 1rem;
+  // .primary-navigation {
+  //   display: none;
+
+  @include breakpoint-down(small) {
+    .container {
+      grid-template-areas:
+        'header'
+        'container'
+        'footer';
+    }
+  }
+  .header {
+    grid-area: header;
+  }
+  .footer {
+    grid-area: footer;
+  }
+  .container {
+    grid-area: container;
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+}

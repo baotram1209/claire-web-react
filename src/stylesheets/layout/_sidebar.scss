@@ -1,0 +1,61 @@
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: $nav-color;
+  // height: 100%;
+  overflow: auto;
+  /* So when we open all the submenu, if the sidebar is longer than the main, we can scroll */
+}
+.sidebar-item {
+  padding: 0.75em 1em;
+
+  display: block;
+  transition: background-color 0.15s;
+  border-radius: 5px;
+}
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  // font-size: 1.2em;
+}
+
+.sidebar-title span i {
+  display: inline-block;
+  /* with inline-block, we can set height and with of the item (compared to inline, can't), and the item stay on the line (compared to 'block' -item is on a different line) */
+  width: 1.5em;
+}
+.sidebar-title .toggle-btn {
+  cursor: pointer;
+}
+
+/* This ">" to select direct children, so that when we click, just 1 level of children appear at once */
+.sidebar-item.open > .sidebar-title .toggle-btn {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.sidebar-content {
+  padding-top: 0.25em;
+  height: 0;
+  overflow: hidden;
+}
+.sidebar-item.open > .sidebar-content {
+  height: auto;
+}
+
+.sidebar-item.plain {
+  color: $text-color;
+  text-decoration: none;
+}
+.sidebar-item.plain:hover {
+  color: $text-color;
+  text-decoration: underline;
+}
+
+.sidebar-item.plain i {
+  display: inline-block;
+  width: 1.7em;
+}

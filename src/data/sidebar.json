@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Accueil",
+    "icon": "bi-gear-fill"
+  },
+  {
+    "title": "Présentation",
+    "icon": "bi-info-circle-fill",
+    "children": [
+      {
+        "title": "Mon parcours",
+        "path": "/mon-parcours"
+      },
+      {
+        "title": "Mon approche",
+        "path": "/mon-approche"
+      },
+      {
+        "title": "Mon cadre éthique et déontologique",
+        "path": "/mon-cadre-ethique-et-deontologique"
+      }
+    ]
+  },
+  {
+    "title": "S'engager dans un travail sur soi",
+    "icon": "bi-person-fill",
+    "children": [
+      {
+        "title": "Pour quel motif consulter ?",
+        "path": "/pour-quel-motif-consulter"
+      },
+
+      {
+        "title": "Qu’attendre des séances ?",
+        "path": "/qu-attendre-des-séances"
+      },
+      {
+        "title": "Comment se déroulent les séances ?",
+        "path": "/comment-se-deroulent-les-séances"
+      }
+    ]
+  },
+  {
+    "title": "Sur un plan pratique",
+    "icon": "bi-view-list",
+    "children": [
+      {
+        "title": "Tarif et remboursement",
+        "path": "/tarif-et-remboursement"
+      },
+      {
+        "title": "Accès au cabinet",
+        "path": "/Acces-au-cabinet"
+      }
+    ]
+  },
+  {
+    "title": "En savoir plus",
+    "icon": "bi-question-circle-fill",
+    "path": "/en-savoir-plus"
+  },
+  {
+    "title": "Contact",
+    "icon": "bi-bug",
+    "path": "/contact"
+  }
+]
