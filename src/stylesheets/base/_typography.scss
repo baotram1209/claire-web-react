@@ -1,7 +1,33 @@
 /**
  * Basic typography style for copy text
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font-family: $text-font-stack;
+}
+
+h1 {
+  font-size: clamp(1rem, 0.561rem + 1.9512vw, 2rem);
+  //Cách tính tìm "clamp" trên css tricks https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 1.1402rem + 0.4878vw, 1.5rem);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: clamp(1rem, 0.8902rem + 0.4878vw, 1.25rem);
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(0.75rem, 0.6402rem + 0.4878vw, 1rem);
+  font-weight: 400;
+  b {
+    font-weight: 700;
+  }
 }

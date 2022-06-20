@@ -11,12 +11,12 @@ function App() {
     <>
       <Router>
         <div className="main">
-          <Sidebar />
-          <Footer />
           <Header />
+          <Sidebar />
           <Routes>
             <Route path="/" exact element={<HomePage />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </>

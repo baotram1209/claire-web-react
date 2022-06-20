@@ -1,14 +1,12 @@
 .sidebar {
-  width: 260px;
-  flex-shrink: 0;
   background-color: $nav-color;
-  // height: 100%;
-  overflow: auto;
+  height: 100%;
+  overflow: scroll;
   /* So when we open all the submenu, if the sidebar is longer than the main, we can scroll */
 }
+
 .sidebar-item {
   padding: 0.75em 1em;
-
   display: block;
   transition: background-color 0.15s;
   border-radius: 5px;
@@ -19,15 +17,6 @@
 .sidebar-title {
   display: flex;
   justify-content: space-between;
-  // font-size: 1.2em;
-}
-
-.sidebar-title span i {
-  display: inline-block;
-  /* with inline-block, we can set height and with of the item (compared to inline, can't), and the item stay on the line (compared to 'block' -item is on a different line) */
-  width: 1.5em;
-}
-.sidebar-title .toggle-btn {
   cursor: pointer;
 }
 
@@ -58,4 +47,83 @@
 .sidebar-item.plain i {
   display: inline-block;
   width: 1.7em;
+}
+
+// MOBILE
+.sidebar-burger {
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  display: none;
+  border: none;
+}
+@include breakpoint-down(small) {
+  .sidebar {
+    height: 0;
+  }
+  .sidebar-links {
+    background-color: $nav-color;
+    padding-top: 50px;
+    position: fixed;
+
+    inset: 0 50% 0 0; //shorthand for top right bottom left
+    // (When position is set to absolute or fixed, the top property specifies the distance
+    // between the element's outer margin of top edge and the inner border of the top edge of its containing block.)
+
+    transform: translateX(
+      -110%
+    ); // to make the menu hidden before clicking burger, it moves to the left by 110% of its own width
+    transition: transform 350ms ease-out;
+  }
+  .show-sidebar {
+    .sidebar-links {
+      transform: translateX(50%);
+    }
+
+    .burger-bar::before {
+      transform: rotate(45deg);
+    }
+    .burger-bar {
+      background: transparent;
+    }
+    .burger-bar::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  //Tạo burger button
+  .sidebar-burger {
+    display: block;
+    position: fixed;
+    top: 0.25rem;
+    left: 50%;
+    transform: translateX(-20px);
+    z-index: 100;
+  }
+  .sidebar-burger:hover {
+    cursor: pointer;
+  }
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: black;
+    position: relative;
+    border-radius: 3px;
+  }
+
+  .burger-bar::before,
+  .burger-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  .burger-bar::before {
+    transform: translateY(-12px);
+  }
+  .burger-bar::after {
+    transform: translateY(12px);
+  }
 }

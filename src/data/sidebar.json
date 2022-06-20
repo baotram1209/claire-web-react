@@ -1,7 +1,8 @@
 [
   {
     "title": "Accueil",
-    "icon": "bi-gear-fill"
+    "icon": "bi-gear-fill",
+    "path": "/"
   },
   {
     "title": "Présentation",
@@ -22,20 +23,20 @@
     ]
   },
   {
-    "title": "S'engager dans un travail sur soi",
+    "title": "S'engager dans\u00A0un\u00A0travail sur\u00A0soi",
     "icon": "bi-person-fill",
     "children": [
       {
-        "title": "Pour quel motif consulter ?",
+        "title": "Pour quel motif consulter\u00A0?",
         "path": "/pour-quel-motif-consulter"
       },
 
       {
-        "title": "Qu’attendre des séances ?",
+        "title": "Qu’attendre des séances\u00A0?",
         "path": "/qu-attendre-des-séances"
       },
       {
-        "title": "Comment se déroulent les séances ?",
+        "title": "Comment se déroulent les séances\u00A0?",
         "path": "/comment-se-deroulent-les-séances"
       }
     ]

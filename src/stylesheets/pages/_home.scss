@@ -1,3 +1,42 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.container-home {
+  background-color: $secondary-background;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'grid-item-1 grid-item-1'
+    'grid-item-2 grid-item-3'
+    'grid-item-4 grid-item-4';
+
+  img {
+    max-width: 80%;
+    margin: auto;
+  }
+  //   @include breakpoint-down(small) {
+  //     margin: 1rem;
+  //   }
+}
+
+@include breakpoint-down(small) {
+  .container-home {
+    grid-template-areas:
+      'grid-item-1 grid-item-1'
+      'grid-item-3 grid-item-3'
+      'grid-item-4 grid-item-4';
+  }
+}
+
+@for $i from 1 through 4 {
+  .grid-item-#{$i} {
+    grid-area: grid-item-#{$i};
+    padding: 1rem;
+  }
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}

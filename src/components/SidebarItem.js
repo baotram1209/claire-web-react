@@ -6,16 +6,9 @@ export default function SidebarItem({ item }) {
   if (item.children) {
     return (
       <div className={open ? 'sidebar-item open' : 'sidebar-item'}>
-        <div className="sidebar-title">
-          <span>
-            {item.icon && <i className={item.icon}></i>}
-
-            {item.title}
-          </span>
-          <i
-            className="bi-chevron-down toggle-btn"
-            onClick={() => setOpen(!open)}
-          ></i>
+        <div className="sidebar-title" onClick={() => setOpen(!open)}>
+          <span>{item.title}</span>
+          <i className="bi-chevron-down toggle-btn"></i>
         </div>
         <div className="sidebar-content">
           {item.children.map((child, index) => (
@@ -27,8 +20,6 @@ export default function SidebarItem({ item }) {
   } else {
     return (
       <a href={item.path || '#'} className="sidebar-item plain">
-        {item.icon && <i className={item.icon}></i>}
-
         {item.title}
       </a>
     );

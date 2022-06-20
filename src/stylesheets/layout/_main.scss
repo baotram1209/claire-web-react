@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: 23ch auto;
+  grid-template-columns: 20% auto;
   grid-template-areas:
     'header header'
     'sidebar container'
@@ -10,12 +10,7 @@
   //   display: none;
 
   @include breakpoint-down(small) {
-    .container {
-      grid-template-areas:
-        'header'
-        'container'
-        'footer';
-    }
+    display: block;
   }
   .header {
     grid-area: header;

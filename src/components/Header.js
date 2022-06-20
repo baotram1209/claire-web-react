@@ -1,11 +1,11 @@
 import React from 'react';
+import cergy from '../assets/Cergy.JPG';
 
 const Header = () => {
   return (
     <>
       <header className="header">
-        abc
-        {/* <img src="./assets/Cergy.JPG" alt="/"> */}
+        <img src={cergy} alt="Cergy" />
       </header>
     </>
   );
