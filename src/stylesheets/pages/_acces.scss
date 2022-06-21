@@ -1,0 +1,8 @@
+.container-acces {
+  img {
+    margin: 1rem;
+    @include breakpoint-up(medium) {
+      max-width: 60%;
+    }
+  }
+}

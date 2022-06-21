@@ -28,7 +28,7 @@ function App() {
             <Route path="/" exact element={<HomePage />} />
             <Route path="/mon-parcours" element={<Parcours />} />
             <Route path="/mon-approche" element={<Approche />} />
-            {/* <Route path="/Acces-au-cabinet" element={<Acces />} /> */}
+            <Route path="/Acces-au-cabinet" element={<Acces />} />
             <Route path="/qu-attendre-des-seances" element={<Attend />} />
             <Route
               path="/mon-cadre-ethique-et-deontologique"
@@ -38,7 +38,7 @@ function App() {
             <Route path="/pour-quel-motif-consulter" element={<Motif />} />
             <Route path="/en-savoir-plus" element={<SavoirPlus />} />
             <Route
-              path="/comment-se-deroulent-les-séances"
+              path="/comment-se-deroulent-les-seances"
               element={<Seance />}
             />
             <Route path="/en-savoir-plus" element={<SavoirPlus />} />

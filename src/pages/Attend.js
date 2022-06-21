@@ -37,11 +37,6 @@ const Attend = () => {
             <button className="button-content">
               Voir l’onglet « Mon approche ».
             </button>
-            {/* <PreviousNextButton
-              text="Voir l’onglet « Mon approche »."
-              onClick={() => navigate(-1)}
-              isNext="false"
-            /> */}
           </Link>
         </div>
       </div>

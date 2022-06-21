@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import champ from '../assets/champ.JPG';
-const Attend = () => {
+const Motif = () => {
   return (
     <>
       <div className="container container-motif">
-        <h1 className="page-header"> Pour quel motif consulter ?</h1>
+        <h1 className="page-header"> Pour quel motif consulter&nbsp;?</h1>
         <div className="page-content page-content-basic">
           <p>
             <b>
@@ -79,4 +79,4 @@ const Attend = () => {
   );
 };
 
-export default Attend;
+export default Motif;

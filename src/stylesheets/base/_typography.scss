@@ -24,7 +24,8 @@ h3 {
   font-weight: 500;
 }
 
-p {
+p,
+li {
   font-size: clamp(0.75rem, 0.6402rem + 0.4878vw, 1rem);
   font-weight: 400;
   b {
