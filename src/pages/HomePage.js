@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <div className="container container-home">
-        <div className="grid-item-1">
+        <div className="page-header grid-item-1">
           <h1>Claire MIGNOT – Gestalt&nbsp;thérapeute</h1>
           <h3>Formée à la thérapie du lien</h3>
         </div>

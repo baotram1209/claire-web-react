@@ -1,0 +1,32 @@
+.parcours-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-width: 60%;
+    margin: auto;
+  }
+  @include breakpoint-up(large) {
+    img {
+      max-width: 80%;
+    }
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      'parcours-last-subgrid-1 parcours-last-subgrid-2'
+      'parcours-last-subgrid-3 parcours-last-subgrid-2'
+      'parcours-last-subgrid-4 parcours-last-subgrid-2';
+
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 4 {
+  .parcours-last-subgrid-#{$i} {
+    grid-area: parcours-last-subgrid-#{$i};
+  }
+}
+.parcours-last p:first-child {
+  margin-top: 0;
+}

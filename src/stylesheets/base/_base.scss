@@ -40,6 +40,15 @@ img {
 
 .container p {
   text-align: justify;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.container {
+  padding: 1rem;
+}
+p:first-child {
+  margin-top: 1rem;
 }
 
 p.center {
@@ -52,8 +61,21 @@ h3 {
   text-align: center;
 }
 
-//Space between paragraph, and lists
-.container p:not(:last-child),
-ul:not(:last-child) {
+.page-header {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.page-content-basic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    align-self: flex-start;
+  }
+}
+
+//Space between paragraph, and lists
+// .container p:not(:last-child),
+// ul:not(:last-child) {
+//   margin-bottom: 1rem;
+// }
